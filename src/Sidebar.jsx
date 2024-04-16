@@ -26,7 +26,7 @@ function Sidebar() {
     },
     {
       title: "Customers",
-      to: null,
+      to: "/Customer",
       icon: Customer,
     },
     {
