@@ -15,7 +15,7 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #0d0d0e;
   text-decoration: inherit;
 }
 a:hover {
@@ -63,9 +63,24 @@ button:focus-visible {
     color: #747bff;
   }
   button {
-    background-color: #f9f9f9;
+    background-color: #078f19;
   }
 }
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer tailwind-base, primereact, tailwind-utilities;
+
+@layer tailwind-base {
+  @tailwind base;
+}
+
+@layer tailwind-utilities {
+  @tailwind components;
+  @tailwind utilities;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}

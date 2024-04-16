@@ -18,8 +18,8 @@ function Navdropdown() {
         onChange={(e) => setSelectedCity(e.value)}
         options={cities}
         optionLabel="name"
-        placeholder="Nanny's Shop  "
-        className="w-full md:w-14rem gap-x-1"
+        placeholder="Nanny's Shop"
+        className="w-full  mt-2  md:w-14rem px-2 h-10"
         checkmark={true}
         highlightOnSelect={false}
       />

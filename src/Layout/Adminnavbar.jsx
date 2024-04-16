@@ -6,9 +6,10 @@ import { useLocation } from "react-router-dom";
 
 function Adminnavbar() {
   const location = useLocation();
+
   const currentPage = location.pathname
     .slice(1, location.pathname.length)
-    .toLocaleUpperCase();
+    .toUpperCase();
 
   return (
     <nav className="flex bg-white w-full sticky top-0 left-0 z-50 py-6 px-8">

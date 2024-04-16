@@ -1,5 +1,5 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-
+import { PrimeReactProvider } from "primereact/api";
 import Layout from "./Layout/Layout";
 import Dashboard from "./Dashboard";
 import Settings from "./Components/Settings";
@@ -12,7 +12,7 @@ function App() {
       element: <Layout />,
       children: [
         {
-          path: "Dashboard",
+          path: "dashboard",
           element: <Dashboard />,
         },
         {
@@ -26,7 +26,11 @@ function App() {
       ],
     },
   ]);
-  return <RouterProvider router={router} />;
+  return (
+    <PrimeReactProvider>
+      <RouterProvider router={router} />
+    </PrimeReactProvider>
+  );
 }
 
 export default App;
