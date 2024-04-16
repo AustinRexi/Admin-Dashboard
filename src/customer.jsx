@@ -42,7 +42,7 @@ import { InputText } from "primereact/inputtext";
 export default function BasicDemo() {
   return (
     <>
-      <IconField iconPosition="left">
+      <IconField iconPosition="left" className="ms-4">
         <InputIcon className="pi pi-search"> </InputIcon>
         <InputText v-model="value1" placeholder="Search" />
       </IconField>

@@ -47,7 +47,7 @@ function Sidebar() {
   ];
 
   return (
-    <aside className="fixed z-50  left-0 top-0 bottom-0 bg-white flex flex-col mt-2">
+    <aside className="fixed z-50  left-0 top-0 bottom-0 bg-white flex flex-col mt-2 ">
       <header className="py-6  flex">
         <img src={Logo} alt=""></img>{" "}
         <p className="font-bold ... mt-2">
