@@ -13,7 +13,6 @@ import DonutChartRace from "./Chart";
 import pending from "./assets/pending.svg";
 import completed from "./assets/completed.svg";
 import BarChart from "./Barchart";
-import ColumnChart from "./Product";
 
 function Dashboard() {
   const data = [

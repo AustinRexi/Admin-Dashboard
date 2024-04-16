@@ -38,14 +38,20 @@
 import { IconField } from "primereact/iconfield";
 import { InputIcon } from "primereact/inputicon";
 import { InputText } from "primereact/inputtext";
+import Product from "./Product";
 
 export default function BasicDemo() {
   return (
-    <>
-      <IconField iconPosition="left" className="ms-4">
-        <InputIcon className="pi pi-search"> </InputIcon>
-        <InputText v-model="value1" placeholder="Search" />
-      </IconField>
-    </>
+    <div className="grid grid-rows-3 grid-flow-col bg-stone-100 gap-4">
+      <div className="row-span-3 bg-white  w-80 mt-2 shadow-md rounded-lg  text-black  relative...">
+        {" "}
+        <IconField iconPosition="left" className="ms-4 mt-2">
+          <InputIcon className="pi pi-search"> </InputIcon>
+          <InputText v-model="value1" placeholder="Search" />
+        </IconField>
+        <Product />
+      </div>
+      <div className="col-span-2 ...">02</div>
+    </div>
   );
 }
