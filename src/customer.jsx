@@ -42,10 +42,10 @@ import Product from "./Product";
 
 export default function BasicDemo() {
   return (
-    <div className="grid grid-rows-3 grid-flow-col bg-stone-100 gap-4">
-      <div className="row-span-3 bg-white  w-80 mt-2 shadow-md rounded-lg  text-black  relative...">
+    <div className="grid grid-rows-3 grid-flow-col bg-stone-100 gap-2 ">
+      <div className="row-span-3 bg-white  w-80 mt-2 ms-4 shadow-md rounded-lg  text-black  relative...">
         {" "}
-        <IconField iconPosition="left" className="ms-4 mt-2">
+        <IconField iconPosition="left" className="ms-4 mt-2 py-2">
           <InputIcon className="pi pi-search"> </InputIcon>
           <InputText v-model="value1" placeholder="Search" />
         </IconField>

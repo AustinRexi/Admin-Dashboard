@@ -60,15 +60,21 @@ function Product() {
     },
   ];
   return (
-    <div className="bg-red-100 ms-1 mt-6 flex gap-2">
-      <img src={User1} alt="" />{" "}
-      <div className="text-nowrap text-xs">
-        <p className="mt-1">{data[0].name}</p>
-        <p>{data[0].description}</p>
-      </div>
-      <div className="text-xs">
-        <p>new</p> <p>time</p>
-      </div>
+    <div>
+      {data.map((el, i) => {
+        return (
+          <div className="bg-red-100 ms-1 mt-6 flex gap-2 " key={i}>
+            <img src={el.icon} alt="" />{" "}
+            <div className="text-nowrap text-xs">
+              <p className="mt-1">{el.name}</p>
+              <p>{el.description}</p>
+            </div>
+            <div className="text-xs">
+              <p>{el.status}</p> <p>{el.time}</p>
+            </div>
+          </div>
+        );
+      })}
     </div>
   );
 }
