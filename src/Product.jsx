@@ -60,17 +60,17 @@ function Product() {
     },
   ];
   return (
-    <div>
+    <div className="overflow-y-auto h-96 overflow-x-hidden px-4 text-nowrap">
       {data.map((el, i) => {
         return (
-          <div className="bg-red-100 ms-1 mt-6 flex gap-2 " key={i}>
+          <div className="bg-red-100 ms-1 mt-4 flex gap-0 " key={i}>
             <img src={el.icon} alt="" />{" "}
             <div className="text-nowrap text-xs">
               <p className="mt-1">{el.name}</p>
               <p>{el.description}</p>
             </div>
             <div className="text-xs">
-              <p>{el.status}</p> <p>{el.time}</p>
+              <p>{el.status}</p> <p className="mt-1">{el.time}</p>
             </div>
           </div>
         );
