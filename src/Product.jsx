@@ -63,7 +63,7 @@ function Product() {
     <div className=" px-4 text-nowrap">
       {data.map((el, i) => {
         return (
-          <div className="bg-red-100 ms-1 mt-4 flex gap-0 " key={i}>
+          <div className="bg-red-100  mt-4 flex gap-0 " key={i}>
             <img src={el.icon} alt="" />{" "}
             <div className="text-nowrap text-xs">
               <p className="mt-1">{el.name}</p>

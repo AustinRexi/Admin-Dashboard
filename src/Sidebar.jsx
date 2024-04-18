@@ -36,7 +36,7 @@ function Sidebar() {
     },
     {
       title: "Conversations",
-      to: null,
+      to: "/Conversations",
       icon: Conversation,
     },
     {

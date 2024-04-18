@@ -2,7 +2,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { PrimeReactProvider } from "primereact/api";
 import Layout from "./Layout/Layout";
 import Dashboard from "./Dashboard";
-import Settings from "./Components/Settings";
+import Conversations from "./Conversations";
+
 import Customer from "./customer";
 
 function App() {
@@ -20,8 +21,8 @@ function App() {
           element: <Customer />,
         },
         {
-          path: "settings",
-          element: <Settings />,
+          path: "conversations",
+          element: <Conversations />,
         },
       ],
     },

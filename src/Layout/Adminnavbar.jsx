@@ -13,9 +13,13 @@ function Adminnavbar() {
 
   return (
     <nav className="flex bg-white w-full ms-1 mt-3 sticky top-0 left-0 z-50 py-6 px-8">
-      <h4 className="text-lg font-bold">
+      <h4 className="text-lg font-semibold">
         {currentPage}
-        <img src={HomeIcon} alt="home" className="mt-4" />
+        <div className="flex">
+          {" "}
+          <img src={HomeIcon} alt="home" className="mt-4" />{" "}
+          <p className="mt-4 ms-2 font-mono">{location.pathname}</p>{" "}
+        </div>
       </h4>
 
       <div className="ml-auto flex">
