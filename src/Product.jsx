@@ -60,7 +60,7 @@ function Product() {
     },
   ];
   return (
-    <div className="overflow-y-auto h-96 overflow-x-hidden px-4 text-nowrap">
+    <div className=" px-4 text-nowrap">
       {data.map((el, i) => {
         return (
           <div className="bg-red-100 ms-1 mt-4 flex gap-0 " key={i}>
