@@ -2,11 +2,77 @@ import { IconField } from "primereact/iconfield";
 import { InputIcon } from "primereact/inputicon";
 import { InputText } from "primereact/inputtext";
 import Product from "./Product";
+import User1 from "./assets/User1.svg";
+import { useState } from "react";
 
 export default function Conversations() {
+  const [search, setSearch] = useState("");
+
+  const data = [
+    {
+      name: "Jane Doe",
+      description: "Hey i want to make inquiries about your ...",
+      icon: User1,
+      time: "12:55am",
+      status: "new",
+    },
+    {
+      name: "Janet Adebayo",
+      description: "Hey i want to make inquiries about your ...",
+      icon: User1,
+      time: "12:55am",
+      status: "new",
+    },
+    {
+      name: "Kunle Adekunle",
+      description: "Hey i want to make inquiries about your ...",
+      icon: User1,
+      time: "12:55am",
+      status: "new",
+    },
+    {
+      name: "Jane Doe",
+      description: "Hey i want to make inquiries about your ...",
+      icon: User1,
+      time: "12:55am",
+    },
+    {
+      name: "Janet Adebayo",
+      description: "Hey i want to make inquiries about your ...",
+      icon: User1,
+      time: "12:55am",
+    },
+    {
+      name: "Kunle Adekunle",
+      description: "Hey i want to make inquiries about your ...",
+      icon: User1,
+      time: "12:55am",
+    },
+    {
+      name: "Jane Doe",
+      description: "Hey i want to make inquiries about your ...",
+      icon: User1,
+      time: "12:55am",
+    },
+    {
+      name: "Janet Adebayo",
+      description: "Hey i want to make inquiries about your ...",
+      icon: User1,
+      time: "12:55am",
+    },
+    {
+      name: "Kunle Adekunle",
+      description: "Hey i want to make inquiries about your ...",
+      icon: User1,
+      time: "12:55am",
+    },
+  ];
+  const filteredData = data.filter((item) =>
+    item.name.toLowerCase().includes(search.toLowerCase())
+  );
   return (
     <div className="bg-stone-100">
-      <div className="ms-3 leading-normal mt-2">
+      <div className="ms-3 leading-normal mt-2 flex">
         conversations with customers{" "}
       </div>
       <div className="grid grid-rows-3 grid-flow-col bg-stone-100 gap-2 ">
@@ -18,9 +84,13 @@ export default function Conversations() {
           </div>
           <IconField iconPosition="left" className="ms-4 mt-2 py-2">
             <InputIcon className="pi pi-search"> </InputIcon>
-            <InputText v-model="value1" placeholder="Search" />
+            <InputText
+              v-model="search"
+              onChange={(e) => setSearch(e.target.value)}
+              placeholder="Search"
+            />
           </IconField>
-          <Product />
+          <Product data={filteredData} />
         </div>
         <div className="col-span-2 ...">02</div>
       </div>
