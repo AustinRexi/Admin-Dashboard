@@ -7,6 +7,19 @@ import { useState } from "react";
 
 export default function Conversations() {
   const [search, setSearch] = useState("");
+  const debounce = (func, delay) => {
+    let timeoutId;
+    return function (...args) {
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(() => {
+        func.apply(this, args);
+      }, delay);
+    };
+  };
+
+  const handleSearch = debounce((value) => {
+    setSearch(value);
+  }, 500);
 
   const data = [
     {
@@ -72,8 +85,8 @@ export default function Conversations() {
   );
   return (
     <div className="bg-stone-100">
-      <div className="ms-3 leading-normal mt-2 flex">
-        conversations with customers{" "}
+      <div className="ms-3 font-medium leading-normal mt-2 flex">
+        Conversations with customers{" "}
       </div>
       <div className="grid grid-rows-3 grid-flow-col bg-stone-100 gap-2 ">
         <div className="row-span-3 bg-white  w-80 mt-2 ms-4 shadow-md rounded-lg  text-black  relative...">
@@ -86,7 +99,7 @@ export default function Conversations() {
             <InputIcon className="pi pi-search"> </InputIcon>
             <InputText
               v-model="search"
-              onChange={(e) => setSearch(e.target.value)}
+              onChange={(e) => handleSearch(e.target.value)}
               placeholder="Search"
             />
           </IconField>
