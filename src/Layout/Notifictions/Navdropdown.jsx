@@ -19,7 +19,7 @@ function Navdropdown() {
         options={cities}
         optionLabel="name"
         placeholder="Nanny's Shop"
-        className="w-full  mt-2  md:w-14rem px-2 h-10"
+        className="w-full  mt-2  md:w-14rem px-3 h-10 border-none outline-none"
         checkmark={true}
         highlightOnSelect={false}
       />

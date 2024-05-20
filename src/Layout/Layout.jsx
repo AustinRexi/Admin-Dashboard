@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import Adminnavbar from "./Adminnavbar";
 import Sidebar from "../Sidebar";
+import Dashboard from "../Dashboard";
 
 function Layout() {
   return (
@@ -9,6 +10,7 @@ function Layout() {
       <div className="pl-52">
         <Adminnavbar />
         <div className="p-4">
+          <Dashboard />
           <Outlet />
         </div>
       </div>

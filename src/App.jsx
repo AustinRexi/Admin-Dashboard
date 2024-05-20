@@ -27,11 +27,7 @@ function App() {
       ],
     },
   ]);
-  return (
-    <PrimeReactProvider>
-      <RouterProvider router={router} />
-    </PrimeReactProvider>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;

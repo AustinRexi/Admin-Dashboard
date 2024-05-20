@@ -61,16 +61,17 @@ function Product(props) {
   // ];
   return (
     <div className=" px-4 text-nowrap">
-      {data.map((el, i) => {
+      {data?.map((el, i) => {
         return (
-          <div className="bg-red-100  mt-4 flex gap-0 " key={i}>
-            <img src={el.icon} alt="" />{" "}
+          <div className="bg-gray-100  mt-3 flex gap-0 " key={i}>
+            <img src={el.icon} alt="" />
             <div className="text-nowrap text-xs">
               <p className="mt-1">{el.name}</p>
               <p>{el.description}</p>
             </div>
             <div className="text-xs">
-              <p>{el.status}</p> <p className="mt-1">{el.time}</p>
+              <p className="ms-1">{el.status}</p>
+              <p className="mt-1">{el.time}</p>
             </div>
           </div>
         );
